@@ -25,14 +25,22 @@
         android:id="@+id/capitalLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:text="Capital"
         android:textColor="@android:color/white"
         android:textSize="15dp"
-        android:text="Capital:"
-        app:layout_constraintTop_toBottomOf="@id/countryTitle"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="10dp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/countryTitle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/backgroundCellColor"
+        app:layout_constraintTop_toBottomOf="@id/capitalLabel"
+        app:layout_constraintBottom_toTopOf="@id/areaLabel"
+        >
+    </View>
 
     <TextView
         android:id="@+id/populationLabel"
@@ -40,7 +48,7 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:textSize="15dp"
-        android:text="Population:"
+        android:text="Population"
         app:layout_constraintTop_toBottomOf="@id/capitalLabel"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="15dp"
@@ -53,20 +61,28 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:textSize="15dp"
-        android:text="Area:"
+        android:text="Area km\u00B2"
         app:layout_constraintTop_toBottomOf="@id/populationLabel"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/backgroundCellColor"
+        app:layout_constraintTop_toBottomOf="@id/areaLabel"
+        app:layout_constraintBottom_toTopOf="@id/subRegionLabel"
+        >
+    </View>
     <TextView
         android:id="@+id/regionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:textSize="15dp"
-        android:text="Region:"
+        android:text="Region"
         app:layout_constraintTop_toBottomOf="@id/areaLabel"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="15dp"
@@ -79,7 +95,7 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:textSize="15dp"
-        android:text="Sub Region:"
+        android:text="Sub Region Of"
         app:layout_constraintTop_toBottomOf="@id/regionLabel"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="15dp"
