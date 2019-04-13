@@ -5,9 +5,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.midtronicsevaluation.API.API;
 import com.example.midtronicsevaluation.Model.Country;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -19,12 +18,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CountryInformation extends AppCompatActivity {
 
-    TextView countryTitle;
-    TextView capitalValue;
-    TextView population;
-    TextView area;
-    TextView region;
-    TextView subRegion;
+    private TextView countryTitle;
+    private TextView capitalValue;
+    private TextView population;
+    private TextView area;
+    private TextView region;
+    private TextView subRegion;
 
 
     @Override
@@ -75,4 +74,5 @@ public class CountryInformation extends AppCompatActivity {
         region.setText(country.getRegion());
         subRegion.setText(country.getSubRegion());
     }
+
 }

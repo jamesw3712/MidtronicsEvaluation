@@ -1,4 +1,4 @@
-package com.example.midtronicsevaluation;
+package com.example.midtronicsevaluation.API;
 
 import com.example.midtronicsevaluation.Model.Country;
 
@@ -14,4 +14,5 @@ public interface API {
 
     @GET("{countryName}")
     Call<List<Country>> getCountryInfo(@Path("countryName") String countryName);
+
 }
