@@ -65,11 +65,11 @@ public class CountryInformation extends AppCompatActivity implements ApiResult {
         if (country.getCapital() == null || country.getCapital().equals("")){
             capitalValue.setText("Unavailable");
         }
-        if (country.getArea() == null || country.getArea().equals("")){
-            population.setText("Unavailable");
-        }
-        if (country.getPopulation() == null || country.getPopulation().equals("")){
+        if (country.getArea() == 0){
             area.setText("Unavailable");
+        }
+        if (country.getPopulation() == 0){
+            population.setText("Unavailable");
         }
         if (country.getRegion() == null || country.getRegion().equals("")){
             region.setText("Unavailable");

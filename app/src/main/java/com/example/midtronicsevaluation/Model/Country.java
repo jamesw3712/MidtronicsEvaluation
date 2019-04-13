@@ -3,14 +3,14 @@ package com.example.midtronicsevaluation.Model;
 public class Country{
 
     private String capital;
-    private Integer population;
-    private Integer area;
+    private int population;
+    private Float area;
     private String region;
     private String subregion;
     private String name;
 
 
-    public Country(String capital, Integer population, Integer area, String region, String subRegion, String name){
+    public Country(String capital, int population, Float area, String region, String subRegion, String name){
         this.capital = capital;
         this.subregion = subRegion;
         this.population = population;
@@ -19,7 +19,7 @@ public class Country{
         this.name = name;
     }
 
-    public Integer getArea() {
+    public Float getArea() {
         return area;
     }
 
@@ -27,7 +27,7 @@ public class Country{
         return capital;
     }
 
-    public Integer getPopulation() {
+    public int getPopulation() {
         return population;
     }
 
