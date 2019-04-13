@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/background_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CountryInformation">
+
+
+    <TextView
+        android:id="@+id/countryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:text="Country name goes here"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/capitalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="Capital:"
+        app:layout_constraintTop_toBottomOf="@id/countryTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/populationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="Population:"
+        app:layout_constraintTop_toBottomOf="@id/capitalLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/areaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="Area:"
+        app:layout_constraintTop_toBottomOf="@id/populationLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/regionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="Region:"
+        app:layout_constraintTop_toBottomOf="@id/areaLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/subRegionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="Sub Region:"
+        app:layout_constraintTop_toBottomOf="@id/regionLabel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/capitalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="america fam"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/countryTitle"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/populationValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="population fam"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/capitalValue"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/areaValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="area fam"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/populationValue"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/regionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="region fam"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/areaValue"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <TextView
+        android:id="@+id/subRegionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:text="sub region fam"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/regionValue"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
