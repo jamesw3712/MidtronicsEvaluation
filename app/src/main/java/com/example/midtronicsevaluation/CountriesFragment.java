@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class CountriesFragment extends Fragment {
@@ -51,7 +52,9 @@ public class CountriesFragment extends Fragment {
 
     private ArrayList<String> getCountries(){
         String [] countries = getResources().getStringArray(R.array.countries_array);
-        return new ArrayList( Arrays.asList(countries) );
+        ArrayList<String> sortedCountries =  new ArrayList( Arrays.asList(countries) );
+        Collections.sort(sortedCountries);
+        return sortedCountries;
     }
 
 

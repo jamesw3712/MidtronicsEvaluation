@@ -9,6 +9,7 @@ import com.example.midtronicsevaluation.Model.Country;
 
 import org.w3c.dom.Text;
 
+import java.text.NumberFormat;
 import java.util.List;
 
 import retrofit2.Call;
@@ -58,7 +59,12 @@ public class CountryInformation extends AppCompatActivity {
         call.enqueue(new Callback<List<Country>>() {
             @Override
             public void onResponse(Call<List<Country>> call, Response<List<Country>> response) {
-                loadInformationInToUI(response.body().get(0));
+                Country country = getCountry(countryTitle.getText().toString(), response.body());
+                if (country == null){
+                    handleError();
+                    return;
+                }
+                loadInformationInToUI(country);
             }
 
             @Override
@@ -70,9 +76,46 @@ public class CountryInformation extends AppCompatActivity {
 
     private void loadInformationInToUI(Country country){
         capitalValue.setText(country.getCapital());
-        population.setText(country.getPopulation());
-        area.setText(country.getArea());
+        population.setText(NumberFormat.getInstance().format(country.getPopulation()));
+        area.setText(NumberFormat.getInstance().format(country.getArea()));
         region.setText(country.getRegion());
         subRegion.setText(country.getSubRegion());
+
+        if (country.getCapital().equals("") || country.getCapital() == null){
+            capitalValue.setText("Unavailable");
+        }
+        if (country.getArea().equals("") || country.getCapital() == null){
+            capitalValue.setText("Unavailable");
+        }
+        if (country.getPopulation().equals("") || country.getCapital() == null){
+            capitalValue.setText("Unavailable");
+        }
+        if (country.getRegion().equals("") || country.getCapital() == null){
+            capitalValue.setText("Unavailable");
+        }
+        if (country.getSubRegion().equals("") || country.getCapital() == null){
+            capitalValue.setText("Unavailable");
+        }
+    }
+
+    private void handleError(){
+        capitalValue.setText("Unavailable");
+        population.setText("Unavailable");
+        area.setText("Unavailable");
+        region.setText("Unavailable");
+        subRegion.setText("Unavailable");
+        Toast.makeText(getApplicationContext(),"failed to get country", Toast.LENGTH_SHORT).show();
+    }
+
+    private Country getCountry(String countryName, List<Country> countries){
+        if (countries == null){
+            return null;
+        }
+        for (Country country: countries){
+            if (country.getName().toLowerCase().equals(countryName.toLowerCase())){
+                return country;
+            }
+        }
+        return countries.get(0);
     }
 }

@@ -1,5 +1,6 @@
 package com.example.midtronicsevaluation;
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,6 +47,10 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Coun
         public CountryCell(View v) {
             super(v);
             countryTextView = v.findViewById(R.id.countryName);
+//            if(getAdapterPosition()%2 == 0){
+//                v.setBackgroundColor(Color.parseColor("#333333"));
+//            }
+//            v.setBackgroundColor(Color.parseColor("#333333"));
             v.setOnClickListener(this);
         }
 
