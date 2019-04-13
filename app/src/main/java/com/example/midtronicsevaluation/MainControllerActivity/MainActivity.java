@@ -1,25 +1,25 @@
-package com.example.midtronicsevaluation;
+package com.example.midtronicsevaluation.MainControllerActivity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.midtronicsevaluation.CountryListFragment.CountriesFragment;
+import com.example.midtronicsevaluation.ProfileFragment.ProfileFragment;
+import com.example.midtronicsevaluation.R;
 
-    private SectionsPageAdapter sectionsPageAdapter;
-    private ViewPager viewPager;
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
-        viewPager = (ViewPager) findViewById(R.id.container);
+        ViewPager viewPager = findViewById(R.id.container);
         setupViewPager(viewPager);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
     }
 

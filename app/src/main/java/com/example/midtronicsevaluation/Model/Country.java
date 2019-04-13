@@ -22,6 +22,7 @@ public class Country{
     public Integer getArea() {
         return area;
     }
+
     public String getCapital() {
         return capital;
     }

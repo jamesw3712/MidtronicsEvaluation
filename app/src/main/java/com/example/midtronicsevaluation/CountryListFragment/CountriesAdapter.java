@@ -1,4 +1,4 @@
-package com.example.midtronicsevaluation;
+package com.example.midtronicsevaluation.CountryListFragment;
 
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
@@ -7,12 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.midtronicsevaluation.R;
+
 import java.util.ArrayList;
 
 public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.CountryCell> {
 
     private ArrayList<String> countries;
-    private static ClickListener clickListener;
+    private ClickListener clickListener;
 
     public CountriesAdapter(ArrayList<String> countries) {
         this.countries = countries;
@@ -30,6 +32,12 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Coun
     @Override
     public void onBindViewHolder(CountryCell holder, int position) {
         holder.countryTextView.setText(countries.get(position));
+        if(position%2 == 0){
+            holder.itemView.setBackgroundColor(Color.parseColor("#333333"));
+        }
+        else{
+            holder.itemView.setBackgroundColor(Color.parseColor("#000000"));
+        }
     }
 
     @Override
@@ -47,10 +55,6 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Coun
         public CountryCell(View v) {
             super(v);
             countryTextView = v.findViewById(R.id.countryName);
-//            if(getAdapterPosition()%2 == 0){
-//                v.setBackgroundColor(Color.parseColor("#333333"));
-//            }
-//            v.setBackgroundColor(Color.parseColor("#333333"));
             v.setOnClickListener(this);
         }
 

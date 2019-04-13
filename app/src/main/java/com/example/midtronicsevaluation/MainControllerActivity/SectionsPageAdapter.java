@@ -1,4 +1,4 @@
-package com.example.midtronicsevaluation;
+package com.example.midtronicsevaluation.MainControllerActivity;
 
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
