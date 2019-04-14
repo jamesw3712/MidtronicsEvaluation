@@ -4,13 +4,13 @@ public class Country{
 
     private String capital;
     private int population;
-    private Float area;
+    private float area;
     private String region;
     private String subregion;
     private String name;
 
 
-    public Country(String capital, int population, Float area, String region, String subRegion, String name){
+    public Country(String capital, int population, float area, String region, String subRegion, String name){
         this.capital = capital;
         this.subregion = subRegion;
         this.population = population;
@@ -19,7 +19,7 @@ public class Country{
         this.name = name;
     }
 
-    public Float getArea() {
+    public float getArea() {
         return area;
     }
 
