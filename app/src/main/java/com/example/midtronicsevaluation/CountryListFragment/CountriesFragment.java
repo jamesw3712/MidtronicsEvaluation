@@ -20,7 +20,7 @@ import java.util.Collections;
 
 public class CountriesFragment extends Fragment {
 
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
 
 
     @Nullable
@@ -35,7 +35,7 @@ public class CountriesFragment extends Fragment {
         CountriesAdapter adapter = new CountriesAdapter(getCountries());
         recyclerView.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new CountriesAdapter.ClickListener() {
+        adapter.setOnItemClickListener(new ClickListener() {
             @Override
             public void onItemClick(String countryClicked) {
                 handleCountryClicked(countryClicked);

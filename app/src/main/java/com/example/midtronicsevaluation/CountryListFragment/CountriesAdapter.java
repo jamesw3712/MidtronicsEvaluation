@@ -63,8 +63,4 @@ public class CountriesAdapter extends RecyclerView.Adapter<CountriesAdapter.Coun
             clickListener.onItemClick(countryTextView.getText().toString());
         }
     }
-
-    public interface ClickListener {
-        void onItemClick(String countryClicked);
-    }
 }

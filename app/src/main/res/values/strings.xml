@@ -4,11 +4,11 @@
     <string name="profileName">James Warda</string>
     <string name="profileTitle">Lead iOS Engineer at Tidbt Technologies LLC</string>
     <string name="ProfileSubTitle">University of Illinois at Chicago • Glenview Illinois</string>
-    <string name="profileSummary">Currently a senior at the University of Illinois at Chicago. One and a half years of Mobile Development experience with determination to attain additional knowledge in this line of work</string>
+    <string name="profileSummary">Currently a senior at the University of Illinois at Chicago. One and a half years of Mobile Development experience with determination to attain additional knowledge in this line of work.</string>
     <string name="experienceSummary">• Developed a Social Media Platform that promotes honesty and is built with the integration of the academic discipline of psychology.\n\n
-                                        • Built front end in Swift with the ability to scale to all iPhone screen sizes\n\n
+                                        • Built front end in Swift with the ability to scale to all iPhone screen sizes.\n\n
                                         • Assisted in the design of NoSQL database (Firebase Firestore) to minimize reads and writes.\n\n
-                                        • Developed back-end APIs using Firebase Cloud Functions in Node.JS\n\n
-                                        • Visit us at tidbt.com</string>
+                                        • Developed back-end APIs using Firebase Cloud Functions in Node.JS.\n\n
+                                        • Visit us at tidbt.com.</string>
 
 </resources>

@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class CountriesAPI {
 
-    ApiResult resultCallback;
+    private ApiResult resultCallback;
 
     public CountriesAPI(ApiResult resultCallback){
         this.resultCallback = resultCallback;
